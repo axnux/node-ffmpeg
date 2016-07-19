@@ -1,10 +1,10 @@
-FROM mhart/alpine-node:6
+FROM sameersbn/ffmpeg
 MAINTAINER xun "me@xun.my"
 
-# Installing ffmpeg
-# RUN apk add --update ffmpeg
-RUN apk add --update ffmpeg --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
+RUN wget -O - https://deb.nodesource.com/setup_6.x | bash
+# RUN bash nodesource_setup.sh
 
 CMD ["ffmpeg", "-version"]
 
 # docker build -t axnux/ffmpeg-node:latest . #
+# credits: https://github.com/sameersbn/docker-ffmpeg
