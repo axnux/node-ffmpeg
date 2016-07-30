@@ -1,1 +1,1 @@
-# docker + alpine + nodejs + ffmpeg
+# docker + ubuntu + nodejs + ffmpeg
